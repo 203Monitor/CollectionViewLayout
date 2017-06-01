@@ -1,0 +1,15 @@
+osx_image: xcode8
+language: objective-c
+xcode_workspace: CollectionViewLayout.xcworkspace
+xcode_schemes: CollectionViewLayout
+
+profile: Podfile
+
+before_install:
+ - pod install #--project-directory=Example
+ 
+script:
+ - xcodebuild -workspace CollectionViewLayout.xcworkspace -scheme CollectionViewLayout -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
+
+ 
