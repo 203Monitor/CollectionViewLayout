@@ -241,7 +241,7 @@ static NSString *const footerId = @"footerId";
 #pragma mark - didSelectItemAtIndexPath
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    NSLog(@"tapped %ld",indexPath.item);
+    NSLog(@"tapped %ld",(long)indexPath.item);
 }
 
 #pragma mark - didDeselectItemAtIndexPath
