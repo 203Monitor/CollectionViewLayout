@@ -11,5 +11,3 @@ before_install:
 script:
  - xcodebuild -workspace CollectionViewPractice.xcworkspace -scheme CollectionViewPractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
-
- 
