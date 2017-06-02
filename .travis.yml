@@ -6,7 +6,7 @@ xcode_schemes: CollectionViewPractice
 profile: Podfile
 
 before_install:
- - pod install #--project-directory=Example
+ - echo $CODE && pod install #--project-directory=Example
  
 script:
  - xcodebuild -workspace CollectionViewPractice.xcworkspace -scheme CollectionViewPractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
