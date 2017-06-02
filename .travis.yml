@@ -5,9 +5,12 @@ xcode_schemes: CollectionViewPractice
 
 profile: Podfile
 
-before_install:
- - echo $CODE && pod install #--project-directory=Example
+before_script:
+ - pod install
  
 script:
  - xcodebuild -workspace CollectionViewPractice.xcworkspace -scheme CollectionViewPractice -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
+after_script:
+- curl -F "file=/Users/travis/Library/Developer/Xcode/DerivedData/CollectionViewPractice-cwnguqtfrmlhnaamtbfpxcnqytrk/Build/Products/Debug-iphonesimulator/CollectionViewPractice.app" -F "uKey=$uKey" -F "_api_key=$apiKey" https://www.pgyer.com/apiv1/app/upload
 
